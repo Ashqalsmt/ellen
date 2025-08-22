@@ -50,7 +50,7 @@ def yttt(app,message):
               return message.reply("**⚠️ حد التحميل نص ساعه فقط**")
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        message.reply_audio(audio=audio_file,performer=channel,title=title,duration=info_dict['duration'],caption=f"@MainCutieBots ~ {stm(info_dict['duration'])}")
+        message.reply_audio(audio=audio_file,performer=channel,title=title,duration=info_dict['duration'],caption=f"@YamenThon ~ {stm(info_dict['duration'])}")
         os.remove(audio_file)
 @app.on_message(filters.command("بحث", ["&",""]),group = 20)
 def search(app, message):
@@ -143,19 +143,19 @@ def get_info(app, query: CallbackQuery):
     
 download = InlineKeyboardMarkup (
   [[
-    InlineKeyboardButton("إلين ♪ ", url='T.me/MainCutieBots')
+    InlineKeyboardButton("إلين ♪ ", url='T.me/YamenThon')
   ]]
 )
 
 upload = InlineKeyboardMarkup (
   [[
-    InlineKeyboardButton("إلين ♪", url='T.me/MainCutieBots')
+    InlineKeyboardButton("إلين ♪", url='T.me/YamenThon')
   ]]
 )
 
 error = InlineKeyboardMarkup (
   [[
-    InlineKeyboardButton("⚠️", url='T.me/MainCutieBots')
+    InlineKeyboardButton("⚠️", url='T.me/YamenThon')
   ]]
 )
 
@@ -191,7 +191,7 @@ def get_audii(app, query: CallbackQuery):
     )
     doneload = InlineKeyboardMarkup (
       [[
-      InlineKeyboardButton("إلين", url="T.me/MainCutieBots")
+      InlineKeyboardButton("إلين", url="T.me/YamenThon")
       ]]
     )
     query.edit_message_text(f"** العنوان [{info_dict['title']}]({url})**", reply_markup=doneload,disable_web_page_preview=True)
@@ -237,7 +237,7 @@ def get_video(app, query: CallbackQuery):
     )
     doneload = InlineKeyboardMarkup (
       [[
-      InlineKeyboardButton("إلين", url='T.me/MainCutieBots')
+      InlineKeyboardButton("إلين", url='T.me/YamenThon')
       ]]
     )
     query.edit_message_text(f"**🔗 [{info_dict['title']}]({url})**", reply_markup=doneload,disable_web_page_preview=True)
